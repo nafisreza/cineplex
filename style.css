@@ -16,3 +16,18 @@ body{
 .carousel{
     margin-top: 56px !important;
 }
+
+.movie {
+  height: 550px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
