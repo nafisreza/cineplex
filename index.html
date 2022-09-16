@@ -21,9 +21,9 @@
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg position-fixed top-0 w-100">
         <div class="container">
-          <a class="navbar-brand h1 mb-0" href="#">Cineplex</a>
+          <a class="navbar-brand h1 fw-bolder mb-0" href="#">Cineplex</a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -33,25 +33,22 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">In Cinemas</a>
+                <a class="nav-link" href="#in-cinemas">In Cinemas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Trending Now</a>
+                <a class="nav-link" href="#trending">Trending Now</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Box Office</a>
+                <a class="nav-link" href="#box-office">Box Office</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
             </ul>
           </div>
@@ -60,7 +57,7 @@
       <!-- Slider -->
       <div
         id="carouselExampleIndicators"
-        class="carousel slide container"
+        class="carousel slide"
         data-bs-ride="true"
       >
         <div class="carousel-indicators">
@@ -120,7 +117,7 @@
     <main>
       <!-- In Cinemas -->
       <div class="container mt-5">
-        <h1 class="text-center">In Cinemas</h2>
+        <h1 class="text-center" id="in-cinemas">In Cinemas</h2>
           <hr>
         <div class="row mt-5">
           <div class="col">
@@ -166,7 +163,7 @@
         <!-- Trending Now -->
 
         <div class="container mt-5">
-            <h1 class="text-center ">Trending Now</h2>
+            <h1 class="text-center" id="trending">Trending Now</h2>
               <hr>
                 <div class="movies row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 justify-content-center gap-3">
                      <!-- Dyanmic Movies via JavaScript -->
@@ -179,7 +176,7 @@
     </main>
 
     <div class="container mt-5">
-      <h1 class="text-center ">Contact us</h2>
+      <h1 class="text-center" id="contact">Any Questions?</h2>
         <hr>
       <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Name</label>
@@ -197,7 +194,13 @@
     </div>
     
     <footer>
-      
+      <footer class="bg-light text-center text-lg-start mt-5">
+        <!-- Copyright -->
+        <div class="text-center p-3">
+          Copyright 2022 © <strong>Nafis</strong> 
+        </div>
+        <!-- Copyright -->
+      </footer>
     </footer>
 
     <!-- Bootstrap JavaScript Bundle with Popper -->

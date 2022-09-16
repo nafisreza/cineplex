@@ -2,11 +2,11 @@
 
 body{
   font-family: "Overpass", sans-serif;
-  background-color: #eaeaea;
+  background-color: #fafafa;
 }
 
 .navbar{
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: #FBF2CF;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); /* For Safari Browser */ 
     z-index: 98;
@@ -15,8 +15,12 @@ body{
 
 .carousel{
     margin-top: 56px !important;
+
 }
 
+.carousel-item {
+  height: 650px !important;
+}
 .movie {
   height: 550px;
   width: 300px;
