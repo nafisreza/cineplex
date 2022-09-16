@@ -8,11 +8,11 @@ const moviesArr = [
       "https://www.torrentbd.com/posters/F69G9Lx6w9PoScHsQK0bUQYY13130760.jpg",
   },
   {
-    title: "Top Gun: Maverick",
+    title: "Cyberpunk Edge",
     year: 2022,
     ticketPrice: 350,
     posterURL:
-      "https://www.torrentbd.com/posters/P7J6QBtsk758rCVZ0TajtQYY1745960.jpg",
+      "https://www.torrentbd.com/posters/O9i2QQQisVytE3b0VHZHMgYY12590266.jpg",
   },
   {
     title: "Orphan: First Kill",
@@ -311,11 +311,9 @@ const moviesArr = [
 ];
 
 function displayMovies() {
-
   const moviesElement = document.querySelector(".movies");
 
   for (let i = 0; i < moviesArr.length; i++) {
-    console.log(moviesArr[i])
     const movieElement = document.createElement("div");
     movieElement.classList.add(
       "movie",
@@ -336,11 +334,59 @@ function displayMovies() {
           <div class="card-body">
             <h5 class="card-title fw-bold">${moviesArr[i].title} (${moviesArr[i].year})</h5>
             <p class="text-danger fw-bold">${moviesArr[i].ticketPrice} ৳</p>
-            <button class="btn btn-dark">Book Ticket</button>
+            <button class="btn btn-dark book-ticket">Book Ticket</button>
           </div>
         `;
-        moviesElement.append(movieElement);
+    moviesElement.append(movieElement);
   }
 }
 
 displayMovies();
+
+// display modal
+
+function displayModal() {
+  const bookTickets = document.querySelectorAll(".book-ticket");
+
+  const modalWindow = document.querySelector(".modal-window");
+
+  for (let i = 0; i < bookTickets.length; i++) {
+    bookTickets[i].addEventListener("click", function () {
+      for (let j = 0; j < moviesArr.length; j++) {
+        if (i === j) {
+          const title = moviesArr[j].title;
+          const year = moviesArr[j].year;
+          const price = moviesArr[j].ticketPrice;
+          const vat = price * (10 / 100); // VAT Calculator
+          const subTotal = price + vat;
+          console.log("clicked");
+
+          // showing modal window
+          modalWindow.style.opacity = 1;
+          modalWindow.style.visibility = "visible";
+
+          // Dynamic HTML
+          modalWindow.innerHTML = ` 
+          <span class="close-btn">❌</span>
+          <h2 class="fw-bold mt-3">${title} (${year})</h2>
+          <h5> <strong>Base Price:</strong> ${price} ৳</h5>
+          <h5> <strong>VAT:</strong> ${vat} ৳</h5>
+          <h3> <strong>Subtotal:</strong> ${subTotal} ৳</h5>
+          <button class="btn btn-danger fw-bond mt-4 buy-now">
+            Buy Now!
+          </button>
+          `;
+
+          // hiding modal window
+          const closeBtn = document.querySelector(".close-btn");
+          closeBtn.addEventListener("click", function () {
+            modalWindow.style.opacity = 0;
+            modalWindow.style.visibility = "hidden";
+          });
+        }
+      }
+    });
+  }
+}
+
+displayModal();
