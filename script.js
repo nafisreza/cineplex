@@ -359,7 +359,6 @@ function displayModal() {
           const price = moviesArr[j].ticketPrice;
           const vat = price * (10 / 100); // VAT Calculator
           const subTotal = price + vat;
-          console.log("clicked");
 
           // showing modal window
           modalWindow.style.opacity = 1;
